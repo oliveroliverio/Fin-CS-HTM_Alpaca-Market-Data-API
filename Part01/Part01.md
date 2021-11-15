@@ -26,3 +26,9 @@ Connect to stream with `wscat`
 ```
 wscat -c wss://paper-api.alpaca.markets/stream
 ```
+
+Input authentation string
+
+```
+{"action": "authenticate", "data": { "key_id": "", "secret_key": ""}}
+```
