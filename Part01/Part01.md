@@ -24,7 +24,7 @@ sudo npm install -g wscat
 
 Connect to stream with `wscat`
 ```
-wscat -c wss://paper-api.alpaca.markets/stream
+wscat -c wss://api.alpaca.markets/stream
 ```
 
 Input authentation string
@@ -32,3 +32,5 @@ Input authentation string
 ```
 {"action": "authenticate", "data": { "key_id": "", "secret_key": ""}}
 ```
+[doc on streaming](https://alpaca.markets/docs/api-documentation/api-v2/market-data/alpaca-data-api-v1/streaming/)
+
