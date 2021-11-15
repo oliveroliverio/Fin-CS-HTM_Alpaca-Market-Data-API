@@ -34,3 +34,9 @@ Input authentation string
 ```
 [doc on streaming](https://alpaca.markets/docs/api-documentation/api-v2/market-data/alpaca-data-api-v1/streaming/)
 
+Install websocket client
+```
+pip install websocket-client
+```
+
+Use this websockets address: `wss://data.alpaca.markets/stream`
