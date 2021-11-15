@@ -20,7 +20,7 @@ def on_message(ws, message):
 # def on_close(ws):
 #     print("closed connection")
 
-socket = "wss://data.alpaca.markets/stream"
+socket = "wss://api.alpaca.markets/stream"
 
 ws = websocket.WebSocketApp(socket, on_open=on_open, on_message=on_message)
 ws.run_forever()
