@@ -79,3 +79,5 @@ def on_message(ws, message):
     print("recieved a message")
     print(message)
 ```
+
+## Stopped here.  21:02.  Cannot authenticate.  Not recieving any messages
