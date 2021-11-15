@@ -52,4 +52,30 @@ socket = "wss://data.alpaca.markets/stream"
 ws = websocket.WebSocketApp(socket, on_open=on_open)
 ws.run_forever()
 ```
-Run `python stream.py`.  Works
+Run `python stream.py`.  Works.  Now it's waiting for instructions.
+Here we'll pass the authentication info.  Note
+```
+auth_data = {
+    "action": "authenticate",
+    "params": API_KEY
+}
+```
+
+Here we give it an "action" and "parameters"
+
+```python
+def on_open(ws):
+    print("opened")
+    auth_data = {
+        "action": "authenticate",
+        "data": {"key_id": config.API_KEY, "secret_key": config.SECRET_KEY}
+    }
+    ws.send(json.dumps(auth_data))
+```
+we.send sends auth to alpaca.  Note, remember how we get an authentication reply/message after sending this?  Need to handle that somehow.  We'll do it on a on_message() method
+
+```python
+def on_message(ws, message):
+    print("recieved a message")
+    print(message)
+```
