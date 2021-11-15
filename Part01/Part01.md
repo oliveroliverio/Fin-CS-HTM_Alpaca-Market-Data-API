@@ -40,3 +40,16 @@ pip install websocket-client
 ```
 
 Use this websockets address: `wss://data.alpaca.markets/stream`
+
+Start with basic python app
+
+`stream.py`
+```python
+def on_open(ws):
+    print("opened")
+
+socket = "wss://data.alpaca.markets/stream"
+ws = websocket.WebSocketApp(socket, on_open=on_open)
+ws.run_forever()
+```
+Run `python stream.py`.  Works
